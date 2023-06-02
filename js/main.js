@@ -11,22 +11,22 @@ const p3 =$('#p3');
 const btnClose = $('#btnClose');
 const btnOpen = $('#btnOpen');
 
-p1.addEventListener('click', function() {
+p1.on('click', function() {
     opentab('skills');
 });
 
-p2.addEventListener('click', function() {
+p2.on('click', function() {
     opentab('experience');
 });
 
-p3.addEventListener('click', function() {
+p3.on('click', function() {
     opentab('education');
 });
-btnClose.addEventListener('click', function() {
+btnClose.on('click', function() {
     closemenu();
 });
 
-btnOpen.addEventListener('click', function() {
+btnOpen.on('click', function() {
     openmenu();
 });
 
@@ -61,14 +61,13 @@ const btnSubmit = $('#btnSubmit');
 
 
 
-btnSubmit.addEventListener('click', function(eventData) {
+btnSubmit.on('click', function(eventData) {
     eventData.preventDefault();
 
-    const date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")).toString();
-    const name = txtName.value.trim();
-    const email = txtEmail.value.trim();
-    const messages = txtMessage.value.trim();
-
+    const date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString();
+    const name = txtName.val().trim();
+    const email = txtEmail.val().trim();
+    const messages = txtMessage.val().trim();
     const message = {
       date,name,email,messages
     };
@@ -79,7 +78,7 @@ btnSubmit.addEventListener('click', function(eventData) {
         if (xhr.readyState === 4) {
             if (xhr.status === 201) {
                 resetForm(true);
-                txtName.focus();
+                    txtName.focus();
                 showToast('success', 'Saved', 'Message sent successfully');
             } else {
                 const errorObj = JSON.parse(xhr.responseText);
@@ -100,34 +99,36 @@ btnSubmit.addEventListener('click', function(eventData) {
 
 function resetForm(clearData) {
     if (clearData) {
-        txtName.value = '';
-        txtEmail.value = '';
-        txtMessage.value = '';
+        console.log(clearData);
+       txtName.val("");
+        txtEmail.val("");
+       txtMessage.val("");
+
     }
 }
 
 function showToast(toastType, header, message) {
     const toast =$("#toast .toast");
-    toast.classList.remove("text-bg-success", "text-bg-warning", "text-bg-danger");
+    toast.removeClass("text-bg-success", "text-bg-warning", "text-bg-danger");
     switch (toastType) {
         case 'success':
-            toast.classList.add('text-bg-success');
+            toast.addClass('text-bg-success');
             break;
         case 'warning':
-            toast.classList.add('text-bg-warning');
+            toast.addClass('text-bg-warning');
             break;
         case 'error':
-            toast.classList.add('text-bg-danger');
+            toast.addClass('text-bg-danger');
             break;
         default:
-            break;
+
     }
-    $("#toast .toast-header > strong").textContent = header;
-   $("#toast .toast-body").textContent = message;
-    toast.classList.add('show');
+    $("#toast .toast-header > strong").text(header);
+   $("#toast .toast-body").text(message);
+        toast.addClass('show');
 
     setTimeout(function() {
-        toast.classList.remove('show');
+        toast.removeClass('show');
     }, 5000);
 }
 

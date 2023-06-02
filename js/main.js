@@ -4,7 +4,7 @@ import {DateTimeFormatter, LocalDateTime} from '../node_modules/@js-joda/core/di
 
 const tabLinks = document.getElementsByClassName('tab-links');
 const tabContents = document.getElementsByClassName('tab-contents');
-
+console.log($===jQuery);
 const p1 = $('#p1');
 const p2 = $('#p2');
 const p3 =$('#p3');

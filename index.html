@@ -180,9 +180,52 @@
                 </div>
                 <div class="contact-right">
                     <form>
-                        <input id="input-name" type="text" name="Name" placeholder="Your Name" required>
-                        <input id="input-email" type="email" name="email" placeholder="Your Email" required >
-                        <textarea id="textarea-message" name="Message" rows="6" placeholder="Your Message"></textarea>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput input-name" placeholder="Brian">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <!--                        <input id="input-name" type="text" name="Name" placeholder="Your Name" required>-->
+                        <div class="form-floating mb-3">
+                            <input id="input-email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput organization organization" placeholder="Brian & Co.LTD">
+                            <label for="floatingInput">Name of Organization</label>
+                        </div>
+                        <!--                        <input id="input-email" type="email" name="email" placeholder="Your Email" required >-->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput organization comments" placeholder="Please add something">
+                            <label for="floatingInput">Comments</label>
+                        </div>
+
+                        <div id="file-inputs">
+                            <div id="file-save" class="form-control">
+                                <input accept="image/*,.pdf" type="file" id="fileInput" style="display: none;">
+                                        <button id="btn-image-selection"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-image-fill" viewBox="0 0 16 16">
+                                            <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707v5.586l-2.73-2.73a1 1 0 0 0-1.52.127l-1.889 2.644-1.769-1.062a1 1 0 0 0-1.222.15L2 12.292V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zm-1.498 4a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+                                            <path d="M10.564 8.27 14 11.708V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-.293l3.578-3.577 2.56 1.536 2.426-3.395z"/>
+                                        </svg></button>
+
+                                        <button id="btn-file-selection" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-font" viewBox="0 0 16 16">
+                                            <path d="M10.943 6H5.057L5 8h.5c.18-1.096.356-1.192 1.694-1.235l.293-.01v5.09c0 .47-.1.582-.898.655v.5H9.41v-.5c-.803-.073-.903-.184-.903-.654V6.755l.298.01c1.338.043 1.514.14 1.694 1.235h.5l-.057-2z"/>
+                                            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+                                        </svg></button>
+                                <div id="bottom-end">
+
+
+                                </div>
+                            </div>
+                                     <butoon id="btn-upload"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-upload" viewBox="0 0 16 16">
+                                          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                                          <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                        </svg></butoon>
+                        </div>
+
+
+                        <!--                        <textarea id="textarea-message" name="Message" rows="6" placeholder="Your Message"></textarea>-->
                         <button id="btnSubmit" type="submit" class="btn btn2">Submit</button>
                     </form>
 

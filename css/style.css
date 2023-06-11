@@ -10,7 +10,7 @@ html{
 
 body {
 
-    background-color: grey;
+    background-color: #2c84a9;
     color: white;
 }
 
@@ -58,7 +58,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: blueviolet;
+    background:#7e173f;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -84,7 +84,7 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-    color: blueviolet;
+    color: #7e173f;
 }
 
 /* about */
@@ -141,7 +141,7 @@ nav ul li a:hover::after {
     content: '';
     width: 0;
     height: 3px;
-    background: blueviolet;
+    background: #7e173f;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -217,7 +217,7 @@ nav ul li a:hover::after {
 }
 
 .services-list div:hover {
-    background-color: blueviolet;
+    background-color:#7e173f;
     transform: translateY(-10px);
 }
 
@@ -248,7 +248,7 @@ nav ul li a:hover::after {
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #8a2be2);
+    background: linear-gradient(rgba(0,0,0,0.6), #7e173f);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -271,7 +271,7 @@ nav ul li a:hover::after {
 }
 .layer a{
     margin-top: 20px;
-    color: blueviolet;
+    color: #7e173f;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -303,7 +303,7 @@ nav ul li a:hover::after {
 
 }
 .btn:hover{
-    background: blueviolet;
+    background: #7e173f;
 }
 
 /*contact*/
@@ -338,7 +338,7 @@ nav ul li a:hover::after {
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: blueviolet;
+    color:#7e173f;
     transform: translateY(-5px);
 }
 .btn.btn2{
@@ -347,7 +347,7 @@ nav ul li a:hover::after {
     transition: transform 0.5s;
 }
 .btn.btn2:hover{
-    background-color: blueviolet;
+    background-color: #7e173f;
 }
 .contact-right form{
     width: 100%;
@@ -473,8 +473,119 @@ nav .xyz{
     .copyright{
         font-size: 10px;
     }
+
+    .close{
+        /*position: absolute;*/
+       left: 220px;
+    }
+}
+@media only screen and (min-width:900px){
+
+    .close{
+        /*position: absolute;*/
+        left: 300px;
+    }
+
 }
 
 .invalid{
     border-color: red !important;
 }
+
+#btnSubmit{
+    margin-top: 50px;
+}
+
+#formGroupExampleInput{
+    width: 400px;
+}
+.btn-file{
+
+}
+
+#file-inputs{
+    height: 150px;
+    width: 550px;
+    display: flex;
+    gap: 10px;
+
+}
+
+#file-save{
+    height: 110%;
+    width: 95%;
+ /*//   background-color: #212529;*/
+    border-radius: 10px ;
+ /*//   background-color: #7e173f;*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+    color: green;
+    /*position: relative;*/
+}
+
+.file{
+    display: flex;
+    position: absolute;
+    /*background-color: white;*/
+
+}
+
+#btn-upload{
+    margin-top: 20px;
+    height: 20px;
+    width: 20px;
+    color: black;
+}
+
+#btn-image-selection{
+margin-top: 100px;
+   position: absolute;
+}
+
+.elementDiv{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    left: 0;
+    /*background-color: #545454;*/
+    gap: 10px;
+    position: relative;
+}
+
+
+.pgb-container {
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 5px;
+    height: 15px;
+    width: 10vw;
+    /*gap: 10px;*/
+    /*height: 20px;*/
+    background-color: lightgray;
+    /*margin: 50px 40px;*/
+    border-radius: 5px;
+   // overflow: hidden;
+    display: inline-block;
+
+}
+
+.pgb {
+    width: 0%;
+    height: 100%;
+    background-color: dodgerblue;
+}
+
+#btn-file-selection{
+    margin-top: 100px;
+    position: absolute;
+    margin-left: 20px;
+}
+
+.close{
+    position: absolute;
+    right: 250px;
+}
+
+

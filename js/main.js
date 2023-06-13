@@ -42,14 +42,21 @@ changeEventCount++;
     const imageFiles = Array.from(AllFiles).filter(file=>file.type.startsWith("image/"));
 
     length = imageFiles.length;
+    console.log(length);
     if(length>0){
         if(changeEventCount===1){
-            uploadImages(imageFiles,changeEventCount);
-        }else {
-            uploadImages(imageFiles,changeEventCount*2);
-        }
+            imageFiles.forEach(images=>{
+                uploadImages(images,changeEventCount);
+            });
 
-        console.log(changeEventCount);
+        }else {
+            imageFiles.forEach(images=>{
+
+                uploadImages(images,changeEventCount*2);
+            });
+
+
+        }
     }else{
         const pdfFiles = Array.from(AllFiles).filter(file=>file.type.startsWith("pdf/"));
         uploadFiles(pdfFiles)
@@ -114,39 +121,81 @@ btnSubmit.on('click', function(eventData) {
     eventData.preventDefault();
 
     const date = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString();
-    const name = txtName.val().trim();
-    const email = txtEmail.val().trim();
-    const messages = txtComments.val().trim();
-    const organization = txtOrganization.val().trim();
+    const name = txtName.val();
+    const email = txtEmail.val();
+    const messages = txtComments.val();
+    const organization = txtOrganization.val();
 
-    const message = {
-      date,name,email,messages,organization
-    };
+   if(validation()) {
 
-    const xhr = new XMLHttpRequest();
+       const message = {
+           date, name, email, messages, organization
+       };
 
-    xhr.addEventListener('readystatechange', function() {
-        if (xhr.readyState === 4) {
-            if (xhr.status === 201) {
-                resetForm(true);
-                    txtName.focus();
-                showToast('success', 'Saved', 'Message sent successfully');
-            } else {
-                const errorObj = JSON.parse(xhr.responseText);
-                showToast('error', 'Failed to send', errorObj.message);
-            }
-        }
-    });
+       const xhr = new XMLHttpRequest();
+
+       xhr.addEventListener('readystatechange', function () {
+           if (xhr.readyState === 4) {
+               if (xhr.status === 201) {
+                   resetForm(true);
+                   txtName.focus();
+                   showToast('success', 'Saved', 'Message sent successfully');
+               } else {
+                   const errorObj = JSON.parse(xhr.responseText);
+                   showToast('error', 'Failed to send', errorObj.message);
+               }
+           }
+       });
 
 
+       xhr.open('POST', 'http://localhost:8080/app/messages', true);
 
-    xhr.open('POST', 'http://localhost:8080/app/messages', true);
-
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    console.log(message);
-    xhr.send(JSON.stringify(message));
-    console.log(message);
+       xhr.setRequestHeader('Content-Type', 'application/json');
+       console.log(message);
+       xhr.send(JSON.stringify(message));
+       uploadImages();
+       console.log(message);
+   }else {
+       showToast('error', 'Failed to send', 'fields can not be emty or add correct values');
+   }
 });
+
+function validation(){
+let validate=true;
+    const name = txtName.val();
+    const email = txtEmail.val();
+    const messages = txtComments.val();
+    const organization = txtOrganization.val();
+
+
+    if(!name){
+
+        validate=false;
+    }else if (/^[A-Za-z]+ $/.test(name)){
+        validate=false;
+    }
+
+    if(!email){
+        validate=false;
+    }
+
+    if(!messages){
+    validate=false;
+    }else if(/^[A-Za-z]+ $/.test(messages)){
+        validate=false;
+    }
+
+    if(!organization){
+       validate=false;
+    }else if(/^[A-Za-z]+ $/.test(organization)){
+
+        validate=false;
+    }
+    return validate;
+}
+
+
+
 
 
 
@@ -190,10 +239,13 @@ function uploadImages(images,size){
 
     const formData = new FormData();
 
-    const selectedImage = images[0];
-    console.log(selectedImage);
+    // var files= images[0].files;
+
+    const selectedImage = images;
+
     if(!selectedImage) return;
     const fileName = selectedImage.name;
+    console.log(fileName);
     const closeElm=$('<div class="close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">\n' +
         '  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>\n' +
         '</svg></div>')
@@ -203,20 +255,33 @@ function uploadImages(images,size){
     const progressBarElm = $('<div class="pgb"></div>').css('display','inline-block');
 
     progressBarElmContainer.append(progressBarElm);
-    console.log(progressBarElmContainer);
+    // console.log(progressBarElmContainer);
     outerDiv.append(nameDiv, progressBarElmContainer,closeElm);
     fileAdd.append(outerDiv);
     //fileAdd.append($('<div class="file"></div>').append($('<div class="pgp"></div>')).attr('style', `margin-top: ${size}px`).text(fileName));
 
    console.log(size);
-    formData.append("iamgeKey",images);
+    formData.append("imageKey",selectedImage);
 
     const xhr = new XMLHttpRequest();
+    const xhrUploading = xhr.upload;
 
     xhr.addEventListener('readystatechange',function (event){
 
+        if (xhr.readyState === xhr.DONE) {
+            if (xhr.status === 201) {
+
+              progressBarElm.css('width','100%');
+            } else {
+                const errorObj = JSON.parse(xhr.responseText);
+                showToast('error', 'Failed to send Image', errorObj.message);
+                progressBarElm.css('width','10%');
+            }
+        }
     });
-    xhr.addEventListener('progress',function (event){
+
+
+    xhrUploading.addEventListener('progress',function (event){
         console.log("inside progress")
         const loadedFileSize = event.loaded;
         const totalFileSize = event.total;
@@ -226,7 +291,6 @@ function uploadImages(images,size){
     });
 
     xhr.open('POST','http://localhost:8080/app/messages',true);
-
     xhr.send(formData);
 
 

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayantha Kuruppuarachchi</title>
+    <link rel="icon" href="img/fav.jpeg">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+Pixels&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer type="module" src="js/main.js"></script>
+
+
+
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+
+            <nav>
+
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Projects/Experiment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="document/gayantha.cv.v1.pdf" download >Download</a></li>
+                    <i id="btnClose" class="fa-solid fa-xmark xyz" ></i>
+                </ul>
+                <i id="btnOpen" class="fa-solid fa-bars xyz" ></i>
+
+            </nav>
+            <div class="header-text">
+                <p>Full stack developer</p>
+                <h1>Hi, I'm <span>Gayantha</span> Kuruppuarachchi<br>
+                    from Sri Lanka
+                </h1>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- about -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/about.jpeg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="about-text">Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.
+                    </p>
+                    <div class="tab-titles">
+                        <p id="p1" class="tab-links active-link" >Skills</p>
+                        <p id="p2" class="tab-links" >Experience</p>
+                        <p id="p3" class="tab-links" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>UI Design</span><br>Designing web/App Interfaces</li>
+                            <li><span>Desktop App Development</span><br>Building Desktop apps</li>
+                            <li><span>Web Development</span><br>Design web applications and web sites</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Trainee</span><br>Institute of Software Engineering</li>
+                            <li>2023-Jan to 2023-June</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bsc in Transport and Logistics Management</span><br>University of Moratuwa</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    services-->
+<!--   <div id="services">-->
+<!--       <div class="container">-->
+<!--           <h1 class="sub-title">Skills</h1>-->
+<!--           <div class="services-list">-->
+<!--               <div>-->
+<!--                   <i class="fa-solid fa-code"></i>-->
+<!--                   <h2>Ui Design</h2>-->
+<!--                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae cumque id illum magni mollitia nemo quasi qui temporibus voluptatem! Ab eius iste labore magni modi natus nesciunt reiciendis, veritatis.-->
+<!--                   </p>-->
+<!--                   <a href="#">Learn more</a>-->
+<!--               </div>-->
+<!--               <div>-->
+<!--                   <i class="fa-solid fa-crop-simple"></i>-->
+<!--                   <h2>Desktop App Development</h2>-->
+<!--                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae cumque id illum magni mollitia nemo quasi qui temporibus voluptatem! Ab eius iste labore magni modi natus nesciunt reiciendis, veritatis.-->
+<!--                   </p>-->
+<!--                   <a href="#">Learn more</a>-->
+<!--               </div>-->
+<!--               <div>-->
+<!--                   <i class="fa-brands fa-app-store"></i>-->
+<!--                   <h2>Web Development</h2>-->
+<!--                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae cumque id illum magni mollitia nemo quasi qui temporibus voluptatem! Ab eius iste labore magni modi natus nesciunt reiciendis, veritatis.-->
+<!--                   </p>-->
+<!--                   <a href="#">Learn more</a>-->
+<!--               </div>-->
+
+<!--           </div>-->
+
+<!--       </div>-->
+<!--   </div>-->
+
+
+    <section class="section skills" id="skills">
+        <div class="container">
+
+            <p class="section-subtitle">My Skills</p>
+
+<!--            <h2 class="h2 section-title">I Develop Skills Regularly</h2>-->
+
+<!--            <p class="section-text">-->
+<!--                Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate-->
+<!--            </p>-->
+
+            <ul class="skills-list">
+
+                <div id="first">
+
+                        <li class="skills-item">
+                            <div class="wrapper" style="width: 85%">
+                                <h3 class=" skills-title">Java</h3>
+
+                                <data class="skills-data" value="85">85%</data>
+                            </div>
+
+                            <div class="skills-progress-box">
+                                <div class="skills-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="wrapper" style="width: 75%">
+                                <h3 class="skills-title">CSS</h3>
+
+                                <data class="skills-data" value="75">75%</data>
+                            </div>
+
+                            <div class="skills-progress-box">
+                                <div class="skills-progress" style="width: 75%"></div>
+                            </div>
+                        </li>
+
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 80%">
+                            <h3 class="skills-title">HTML</h3>
+
+                            <data class="skills-data" value="80">80%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 80%"></div>
+                        </div>
+                    </li>
+
+
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 75%">
+                            <h3 class="skills-title">ECMA Script</h3>
+
+                            <data class="skills-data" value="75">75%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 75%"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 75%">
+                            <h3 class="skills-title">Type Script</h3>
+
+                            <data class="skills-data" value="75">75%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 75%"></div>
+                        </div>
+                    </li>
+
+                </div>
+
+                <div id="second">
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 80%">
+                            <h3 class="skills-title">My SQL</h3>
+
+                            <data class="skills-data" value="80">80%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 80%"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 70%">
+                            <h3 class="skills-title">MongoDB</h3>
+
+                            <data class="skills-data" value="70">70%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 70%"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 80%">
+                            <h3 class="skills-title">Spring</h3>
+
+                            <data class="skills-data" value="80">80%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 80%"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 75%">
+                            <h3 class="skills-title">Spring Boot</h3>
+
+                            <data class="skills-data" value="75">75%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 75%"></div>
+                        </div>
+                    </li>
+
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 85%">
+                            <h3 class="skills-title">Node Js</h3>
+
+                            <data class="skills-data" value="85">85%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 85%"></div>
+                        </div>
+                    </li>
+
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 85%">
+                            <h3 class="skills-title">Bootstrap</h3>
+
+                            <data class="skills-data" value="85">85%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 85%"></div>
+                        </div>
+                    </li>
+
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 70%">
+                            <h3 class="skills-title">Angular</h3>
+
+                            <data class="skills-data" value="70">70%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 70%"></div>
+                        </div>
+                    </li>
+
+
+                    <li class="skills-item">
+                        <div class="wrapper" style="width: 70%">
+                            <h3 class="skills-title">React</h3>
+
+                            <data class="skills-data" value="70">70%</data>
+                        </div>
+
+                        <div class="skills-progress-box">
+                            <div class="skills-progress" style="width: 70%"></div>
+                        </div>
+                    </li>
+
+
+                </div>
+
+            </ul>
+
+        </div>
+    </section>
+
+
+
+<!--    portfolio-->
+    <div id="portfolio">
+        <div class="container">
+            <div id="projects">
+                <h1 class="sub-title">Main Projects</h1>
+                <div class="work-list">
+
+                    <div class="work">
+                        <img src="img/progress.png" >
+                        <div class="layer">
+                            <h3>Studnet Progresss Monitor Application</h3>
+                            <p>This application is an innovative software tool designed to track
+                                and evaluate the academic performance and progress of students.
+                                It serves as comprehensive system which allows educational
+                                institutions, teachers and parents to monitor and analyze the
+                                growth and development of students in real time
+                            </p>
+                            <a href=><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="img/pos%20.png" >
+                        <div class="layer">
+                            <h3>POS system </h3>
+                            <p> Main aim of that project is to system designed for the spare parts industry can help manage inventory efficiently and track stock levels, generate automated alerts for low stock, and provide real-time visibility into available parts. This helps prevent stockouts and reduces the chances of lost sales due to unavailability of parts.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="experiments">
+                <h1 class="sub-title"> Experiments</h1>
+                <div class="work-list">
+
+                    <div class="work">
+                        <img src="img/progress.png" >
+                        <div class="layer">
+                            <h3>Studnet Progresss Monitor Application</h3>
+                            <p>This application is an innovative software tool designed to track
+                                and evaluate the academic performance and progress of students.
+                                It serves as comprehensive system which allows educational
+                                institutions, teachers and parents to monitor and analyze the
+                                growth and development of students in real time
+                            </p>
+                            <a href=><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="img/pos%20.png" >
+                        <div class="layer">
+                            <h3>POS system </h3>
+                            <p> Main aim of that project is to system designed for the spare parts industry can help manage inventory efficiently and track stock levels, generate automated alerts for low stock, and provide real-time visibility into available parts. This helps prevent stockouts and reduces the chances of lost sales due to unavailability of parts.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="img/image.webp" >
+                        <div class="layer">
+                            <h3>Image Gallery Application</h3>
+                            <p>Image gallery app is provide users with a seamless and interactive way
+                                to access the images . it serves as a convenient and user friendly
+                                platform for individuals explore photography, and engage with other
+                                through their visual creator.
+                            </p>
+                            <a href=><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/Gayantha250" class="btn">See more</a>
+        </div>
+    </div>
+<!--    contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>gayantha355@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>(+94) 710357313 </p>
+                    <p><i class="fa-brands fa-discord"></i>gayantha#19676</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Gayantha250"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gayantha-kuruppuarachchi/"><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="document/gayantha.cv.v1.pdf " download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+
+                        <div class="form-floating mb-3">
+                            <input id="input-name" type="text" class="form-control" id="floatingInput " placeholder="Brian">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <!--                        <input id="input-name" type="text" name="Name" placeholder="Your Name" required>-->
+                        <div class="form-floating mb-3">
+                            <input id="input-email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input id="organization" type="text" class="form-control" id="floatingInput  organization" placeholder="Brian & Co.LTD">
+                            <label for="floatingInput">Name of Organization</label>
+                        </div>
+                        <!--                        <input id="input-email" type="email" name="email" placeholder="Your Email" required >-->
+                        <div class="form-floating mb-3">
+                            <input id="comments" type="text" class="form-control" id="floatingInput organization comments" placeholder="Please add something">
+                            <label for="floatingInput">Comments</label>
+                        </div>
+
+                        <div id="file-inputs">
+                            <div id="file-save" class="form-control">
+                                <input accept="image/*,.pdf" type="file" id="fileInput" style="display: none;">
+                                        <button id="btn-image-selection"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-image-fill" viewBox="0 0 16 16">
+                                            <path d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707v5.586l-2.73-2.73a1 1 0 0 0-1.52.127l-1.889 2.644-1.769-1.062a1 1 0 0 0-1.222.15L2 12.292V2a2 2 0 0 1 2-2zm5.5 1.5v2a1 1 0 0 0 1 1h2l-3-3zm-1.498 4a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0z"/>
+                                            <path d="M10.564 8.27 14 11.708V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-.293l3.578-3.577 2.56 1.536 2.426-3.395z"/>
+                                        </svg></button>
+
+<!--                                        <button id="btn-file-selection" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-font" viewBox="0 0 16 16">-->
+<!--                                            <path d="M10.943 6H5.057L5 8h.5c.18-1.096.356-1.192 1.694-1.235l.293-.01v5.09c0 .47-.1.582-.898.655v.5H9.41v-.5c-.803-.073-.903-.184-.903-.654V6.755l.298.01c1.338.043 1.514.14 1.694 1.235h.5l-.057-2z"/>-->
+<!--                                            <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>-->
+<!--                                        </svg></button>-->
+                                <div id="bottom-end">
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!--                        <textarea id="textarea-message" name="Message" rows="6" placeholder="Your Message"></textarea>-->
+                        <button id="btnSubmit" type="submit" class="btn btn2">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright ">
+            <p>Copyright ©2023 Gayantha Kuruppuarachchi. All Right Received.</p>
+        </div>
+    </div>
+    <div id="toast" class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+        <div id="liveToast" class="toast" dat-bs-autohide="true" data-bs-delay="1000" role="alert" aria-live="assertive"
+             aria-atomic="true">
+            <div class="toast-header">
+
+                <strong class="me-auto"></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
